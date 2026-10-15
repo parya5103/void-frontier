@@ -1,0 +1,43 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs and temp output
+*.log
+npm-debug.log*
+yarn-error.log*
+tmp/
+temp/
+.cache/
+
+# Node (this project has no build step, but keep local installs out of the repo)
+node_modules/
+dist/
+build/
+.npm/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Python (only used for the optional local preview server)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment / secrets — never commit credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Test / debug artefacts
+coverage/
+*.tgz
+screenshots/local/
