@@ -1,6 +1,6 @@
 # VOID FRONTIER
 
-An original browser-based 3D space empire strategy game — **Milestone 1: runnable prototype**.
+An original browser-based 3D space empire strategy game.
 
 Command a small interstellar directorate: explore an interactive 3D galaxy, select and colonize
 original worlds, extract **Metal / Crystal / Energy**, upgrade **Mines** and **Power Plants**,
@@ -15,13 +15,13 @@ Three.js.
 
 ## Live demo
 
-**https://static.teamily.ai/sites/52129b28-a1d9-4a4b-a22c-da521e3b5805/webpages/void-frontier_v3/index.html**
+**https://static.teamily.ai/sites/52129b28-a1d9-4a4b-a22c-da521e3b5805/webpages/void-frontier_v5/index.html**
 
 The demo targets **Android mobile browsers first**, and works on desktop.
 
 ---
 
-## Features (Milestone 1)
+## Features
 
 | # | Feature | Status |
 |---|---------|--------|
@@ -38,7 +38,7 @@ The demo targets **Android mobile browsers first**, and works on desktop.
 | 11 | Sound controls — audio **off until the user enables it** | Done |
 | 12 | Clear loading state + useful error messages (incl. WebGL context-loss recovery) | Done |
 
-**Not a multiplayer game.** This milestone is single-player and browser-local. `localStorage`
+**Not a multiplayer game.** The game is currently single-player and browser-local. `localStorage`
 is *not* multiplayer, fake players are not multiplayer, and simulated events are not multiplayer.
 See [Multiplayer roadmap](#multiplayer-roadmap-honest-status) below.
 
@@ -141,7 +141,7 @@ export and import, and starting a new game.
 
 ## Multiplayer roadmap (honest status)
 
-This milestone is a **local prototype, not an MMO**. The following are **not implemented**:
+This build is **local single-player, not an MMO**. The following are **not implemented**:
 
 - Secure registration / login and per-player identity
 - A shared, persistent galaxy

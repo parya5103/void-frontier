@@ -374,7 +374,7 @@ export class UI {
         <button class="btn sm danger" data-act="reset">New game</button>
       </div>
       <p class="muted sm">Sound starts OFF. Enable it with the speaker button, top-right.</p>
-      <p class="muted sm">VOID FRONTIER \u00b7 Milestone 1 local prototype \u00b7 all artwork generated in-browser \u00b7 v${GAME.version}</p>`;
+      <p class="muted sm">VOID FRONTIER \u00b7 all artwork generated in-browser \u00b7 v${GAME.version}</p>`;
   }
 
   /* -------------------------------------------------------------- toasts */

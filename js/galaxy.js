@@ -294,7 +294,11 @@ export class GalaxyView {
     const pointers = new Map();
 
     const onDown = (e) => {
-      c.setPointerCapture && c.setPointerCapture(e.pointerId);
+      // Guarded: setPointerCapture throws NotFoundError when the pointer is no
+      // longer active (seen on multi-touch and some WebViews); an uncaught
+      // throw here would abort the handler before the pointer is tracked,
+      // which breaks pinch-zoom on those devices.
+      try { if (c.setPointerCapture) c.setPointerCapture(e.pointerId); } catch (err) { /* optional */ }
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       if (pointers.size === 1) { dragging = true; moved = 0; lx = e.clientX; ly = e.clientY; }
       if (pointers.size === 2) { dragging = false; pinchDist = this._pinch(pointers); }

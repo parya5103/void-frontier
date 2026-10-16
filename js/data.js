@@ -10,8 +10,8 @@ export const GAME = {
   title: 'VOID FRONTIER',
   faction: 'HELIOS CONCORD',
   sector: 'SECTOR 07',
-  milestone: 'MILESTONE 1 — LOCAL PROTOTYPE',
-  version: '1.0.0-m1',
+  milestone: 'HELIOS CONCORD CAMPAIGN',
+  version: '1.0.0',
   saveKey: 'void-frontier:save:v1',
   soundKey: 'void-frontier:sound:v1',
   /** Max seconds credited to offline production on a restore (anti-exploit). */

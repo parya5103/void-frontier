@@ -208,7 +208,9 @@ b { font-weight: 650; }
 
 /* ------------------------------- side sheet ------------------------------ */
 #sheet {
-  position: absolute; z-index: 9; top: 0; right: 0; height: 100%; width: 400px; max-width: 100vw;
+  /* Starts below the HUD so an open panel never covers the sound / save /
+     help buttons (they were unreachable behind the sheet on desktop). */
+  position: absolute; z-index: 9; top: 64px; right: 0; height: calc(100% - 64px); width: 400px; max-width: 100vw;
   background: var(--panel-solid); border-left: 1px solid var(--line);
   transform: translateX(102%); transition: transform .32s cubic-bezier(.22,.7,.3,1);
   display: flex; flex-direction: column; box-shadow: var(--shadow);
@@ -338,6 +340,24 @@ b { font-weight: 650; }
   #sheet.open { transform: none; }
   .ship-grid { grid-template-columns: 1fr 1fr; }
   #toasts { bottom: 92px; }
+}
+@media (max-width: 560px) {
+  /* Keep every HUD control on screen on phones: the resource read-outs flex
+     and scroll instead of pushing the sound / save / help buttons off the
+     right edge (they were unreachable below ~440px before). */
+  #hud { padding: 8px 10px; gap: 8px; }
+  .brand-text { display: none; }
+  .res-bar {
+    min-width: 0; flex: 1 1 auto; gap: 5px;
+    overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .res-bar::-webkit-scrollbar { display: none; }
+  .res { flex: none; padding: 4px 8px; gap: 6px; }
+  .res svg { width: 14px; height: 14px; }
+  .res .val { font-size: 12px; }
+  .hud-actions { flex: none; gap: 5px; }
+  .icon-btn { width: 36px; height: 36px; }
+  .icon-btn svg { width: 18px; height: 18px; }
 }
 @media (max-width: 420px) {
   .brand-text b { font-size: 12px; letter-spacing: .16em; }
