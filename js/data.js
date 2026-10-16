@@ -181,7 +181,7 @@ export function getPlanet(id) { return PLANET_INDEX[id] || null; }
 export function planetType(planet) { return PLANET_TYPES[planet.type] || PLANET_TYPES.barren; }
 
 /* ------------------------------- BUILDINGS -------------------------------- */
-/* Two directly upgradeable structures ship in Milestone 1: MINE and POWER      */
+/* Two directly upgradeable structures ship in the base game: MINE and POWER      */
 /* PLANT. Cost/throughput scale geometrically so growth is felt but bounded.    */
 export const BUILDINGS = {
   mine: {
